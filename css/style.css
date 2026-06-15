@@ -1,0 +1,756 @@
+
+/*****upd*******/
+.shadow-pane {
+    -fx-background-color: white; /* Ensure your background is white */
+    -fx-background-radius: 8; /* Optional: adds rounded corners */
+    -fx-border-color: #ddd; /* Optional: a very light border */
+    -fx-border-width: 0.5; /* Optional: a very thin border */
+    -fx-border-radius: 8; /* Should match background-radius if used */
+
+    /* Shadow properties */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+    /*
+     * dropshadow(effectType, color, radius, spread, offsetX, offsetY)
+     * - effectType: gaussian (common for soft shadows)
+     * - color: rgba(0, 0, 0, 0.2) -> black with 20% opacity
+     * - radius: 10 -> blur radius of the shadow
+     * - spread: 0 -> how much the shadow spreads (0 means no spread, 1 means full spread)
+     * - offsetX: 0 -> horizontal offset of the shadow
+     * - offsetY: 0 -> vertical offset of the shadow
+    */
+}
+/* For a slightly stronger shadow, you could use: */
+.shadow-pane-strong {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 0);
+}
+
+/* For a shadow that looks like it's coming from a light source above */
+.shadow-pane-elevated {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 8, 0, 0, 5); /* Small blur, slight vertical offset */
+}
+/* If you want an arrow within the button: */
+
+/*
+
+*/
+
+.menu{
+    -fx-background-radius: 10px 10px 0 0; 
+        -fx-background-color: linear-gradient(to right, #4A00B0, #8E2DE2); /* Choose your preferred gradient */
+
+}
+.food-type-container {
+    /* Adds 10 pixels of space to the top of the HBox */
+    -fx-padding: 10px 0 0 0;
+    
+    /* Adds 5 pixels of horizontal space between each button */
+    -fx-spacing: 5px;
+}
+.button-food-type {
+    -fx-background-color: white; /* White background */
+    
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px; /* Adjust as needed for desired roundness */
+    -fx-background-radius: 5px; /* Ensures background also has the radius */
+    -fx-text-fill: black; /* Text color on the button */
+    -fx-padding: 5px 15px; /* Adjust padding as needed */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2); /* Subtle drop shadow */
+    -fx-background-insets: 0, 0 0 0 0; /* Ensures background fills entire area */
+}
+
+.button-food-type:hover {
+    /* Use rgba to define a transparent cheese color */
+    -fx-background-color: whitesmoke;
+    -fx-effect: dropshadow(gaussian, white, 15, 0.7, 0, 0); /* White dropshadow */
+    -fx-text-fill: black; 
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 3); /* Slightly more prominent shadow on hover */
+}
+
+
+.active-food-type-button {
+     /* Styles for the actively selected food type button */
+    -fx-background-color: rgba(255, 166, 0, 0.5) ; /* A vibrant blue for active state */
+    -fx-text-fill: white;         /* White text for contrast */
+    -fx-font-weight: bold;     /* Keep font bold */
+}
+
+.login-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.25); /* Lower alpha for more transparency */
+    -fx-background-radius: 20px;
+    -fx-padding: 30px;
+    
+    /* * The effect property is the key to the blurred, frosted look.
+     * We'll use a combination of a Gaussian blur and a dropshadow for depth.
+     */
+ -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 0) ;
+    -fx-effect: dropshadow(gaussian, rgba(147, 112, 219, 0.5), 15, 0.6, 0, 0); /* Subtle universe-colored glow */
+
+    /* * You might not need a solid border, but if you want one,
+     * use a semi-transparent color.
+     */
+    -fx-border-color: rgba(255, 255, 255, 0.3); /* Softer border */
+    -fx-border-radius: 20px;
+}
+
+/* button-universe-gradient.css */
+
+.button-universe {
+    /* Base Gradient: Deep Space Blue to Purple */
+    -fx-background-color: linear-gradient(to bottom, #191970, #4B0082);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #9370DB; /* A MediumPurple border to match the theme */
+    -fx-border-width: 1px;
+    -fx-padding: 5px 5px;
+    
+    /* Subtle outer glow to mimic starlight */
+    -fx-effect: dropshadow(three-pass-box, rgba(147, 112, 219, 0.5), 10, 0, 0, 0);
+
+    /* Smooth transition for all effects */
+    -fx-transition: all 0.4s ease-in-out;
+}
+
+.button-universe:hover {
+    /* Change the gradient to make it look like a flash of light */
+    -fx-background-color: linear-gradient(to right, #4169E1, #9370DB, #8A2BE2);
+    
+    /* Make the glow effect stronger and more vibrant */
+    -fx-effect: dropshadow(gaussian, rgba(147, 112, 219, 0.9), 25, 0.5, 0, 0);
+
+    /* A smooth transition is key to making this look good */
+    -fx-transition: -fx-background-color 0.4s ease-out, -fx-effect 0.4s ease-out;
+}
+.text-color{
+     -fx-text-fill: linear-gradient(to bottom, #191970, #4B0082);
+    -fx-font-weight: bold;
+
+}
+/* Base style for the glass text field */
+.text-field-glass {
+    /* Transparent background for the "glass" effect */
+    -fx-background-color: transparent;
+    
+    /* Remove all borders initially */
+    -fx-border-width: 0 0 0 0;
+    
+    /* Set only the bottom border */
+    -fx-border-color: #A9A9A9; /* A light gray for the border */
+    -fx-border-width: 0 0 1px 0;
+    
+    /* Set the text and prompt text colors */
+    -fx-text-fill: linear-gradient(to bottom, #191970, #4B0082);
+     -fx-font-weight: bold;
+
+    -fx-prompt-text-fill:linear-gradient(to bottom, #191970, #4B0082); 
+    
+    /* Adjust padding to your liking */
+    -fx-padding: 5px;
+    
+    /* Optional: Add a subtle glow on focus */
+    -fx-effect: dropshadow(three-pass-box, rgba(147, 112, 219, 0.5), 10, 0, 0, 0);
+}
+
+/* Style for when the text field is focused */
+.text-field-glass:focused {
+    /* Make the bottom border a more vibrant blue when focused */
+    -fx-border-color: linear-gradient(to bottom, #191970, #4B0082);
+    -fx-border-width: 0 0 2px 0;
+    
+    /* Stronger glow effect on focus */
+   /* -fx-effect: dropshadow(gaussian, rgba(147, 112, 219, 0.9), 25, 0.5, 0, 0);*/
+        -fx-effect: dropshadow(gaussian, rgba(147, 112, 219, 0.5), 15, 0.6, 0, 0); /* Subtle universe-colored glow */
+
+}
+/* Custom font family definition */
+/* Make sure Font Awesome Free-Solid-900.ttf is in your project's resources folder */
+
+/* Style for the icon label */
+.icon-universe-style {
+    /* Use the Font Awesome font and set a large size */
+    -fx-font-family: "Font Awesome 5 Free";
+    -fx-font-size: 80px; /* Adjust size as needed */
+    -fx-font-weight: bold; /* Corresponds to the 900 weight */
+
+    /* Apply the linear gradient to the text fill */
+    /* This gives the icon its "universe" colors */
+    -fx-text-fill: linear-gradient(from 0% 0% to 100% 100%, #4169E1, #9370DB 50%, #8A2BE2);
+    
+    /* Create the 3D-like glow effect using dropshadow */
+    -fx-effect: dropshadow(gaussian, rgba(147, 112, 219, 0.9), 25, 0.5, 0, 0);
+
+    /* Optional: Add an inner shadow to enhance the 3D effect */
+    /* This is the closest pure CSS can get to the "shading" in your image */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0.5, 0, 0),
+                innershadow(gaussian, rgba(255, 255, 255, 0.3), 5, 0.5, 0, 0);
+}
+/* your-styles.css or a dedicated navbar-styles.css */
+
+/* combo-box-styles.css */
+
+.combo-box {
+    -fx-background-color: white; /* Base white background for the whole ComboBox */
+    -fx-border-color: #C0C0C0;   /* Light gray border for a subtle shape */
+    -fx-border-radius: 5px;      /* Slightly rounded corners */
+    -fx-background-radius: 5px;
+    -fx-font-size: 12px;
+    -fx-text-fill: linear-gradient(to right, #4A00B0, #8E2DE2);
+}
+.combo-box-blue {
+    -fx-background-color: #c0c7e2; /* Base white background for the whole ComboBox */
+    -fx-border-color: #C0C0C0;   /* Light gray border for a subtle shape */
+    -fx-border-radius: 5px;      /* Slightly rounded corners */
+    -fx-background-radius: 5px;
+    -fx-font-size: 12px;
+    -fx-text-fill: linear-gradient(to right, #4A00B0, #8E2DE2);
+}
+
+/* Style for the button (where the selected value is displayed) */
+.combo-box .arrow-button {
+    -fx-background-color: transparent; /* Make arrow button background transparent */
+    -fx-padding: 0 8px 0 0; /* Adjust padding to bring arrow closer if needed */
+}
+
+/* Style for the arrow itself */
+.combo-box .arrow {
+    -fx-background-color: black; /* Black color for the dropdown arrow */
+    -fx-shape: "M0,0 L3,3 L6,0 Z"; /* Default triangle shape for the arrow */
+}
+
+/* Style for the list cell (items in the dropdown list) */
+.combo-box .list-cell {
+    -fx-background-color: white; /* White background for individual list items */
+    -fx-text-fill: black;        /* Black text for individual list items */
+    -fx-padding: 5px 10px;
+}
+
+/* Hover effect for list cells */
+.combo-box .list-cell:hover {
+    -fx-background-color: #E0E0E0; /* Light gray background on hover for list items */
+    -fx-text-fill: black;
+}
+
+/* Focused style for the ComboBox itself */
+.combo-box:focused {
+    -fx-border-color: #0078D7; /* A subtle blue border when focused */
+    -fx-effect: dropshadow(gaussian, rgba(0,120,215,0.4), 5, 0, 0, 0); /* Soft blue glow on focus */
+}
+
+/* Read-only ComboBox (if applicable) */
+.combo-box-base {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+/* Base 3D Button Style */
+.white-button {
+    /* Background Gradient for a 3D look */
+    -fx-background-color: 
+        linear-gradient(to top, #e0e0e0, #f8f8f8); /* Gradient from bottom (darker) to top (lighter) */
+        
+    -fx-text-fill: linear-gradient(to right, #4A00B0, #8E2DE2);
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+   /* -fx-padding: 10px 20px;*/
+    -fx-background-radius: 8px; /* Rounded corners for a softer look */
+    -fx-border-radius: 8px;
+    -fx-border-width: 0px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
+    
+    /* 3D Effect using a combination of inner and outer shadows */
+    -fx-effect: 
+        /* Outer shadow for lifting the button off the background */
+        dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.4, 1, 1),
+        /* A subtle highlight on the top edge */
+        innershadow(gaussian, rgba(255, 255, 255, 0.7), 2, 0, 1, 1),
+        /* A subtle shadow on the bottom edge */
+        innershadow(gaussian, rgba(0, 0, 0, 0.2), 2, 0, -1, -1);
+}
+
+/* Hover Effect: The button appears slightly brighter and more elevated */
+.white-button:hover {
+    -fx-background-color: 
+        linear-gradient(to top, #e5e5e5, #ffffff); /* Brighter gradient */
+    
+    -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 2, 2),
+        innershadow(gaussian, rgba(255, 255, 255, 0.8), 3, 0, 1.5, 1.5),
+        innershadow(gaussian, rgba(0, 0, 0, 0.25), 3, 0, -1.5, -1.5);
+}
+
+/* Pressed Effect: Simulating a push into the surface */
+.white-button:pressed {
+    -fx-background-color: 
+        linear-gradient(to top, #d3d3d3, #e0e0e0); /* Flatter, darker gradient */
+    
+    /* The effect is reversed to make it look like the button is 'sunken' */
+    -fx-effect: 
+        innershadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 2, 2), /* Prominent inner shadow */
+        dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.4, 0, 0); /* Smaller, centered outer shadow */
+    
+    -fx-translate-y: 1px; /* A slight downward shift to emphasize the press */
+}
+
+/* Base Button Style */
+.bluepurple-button {
+    -fx-background-color: 
+        linear-gradient(to right, #9C8AD4, #A3D8FF);
+    
+    -fx-text-fill: #333333; /* Darker text for better contrast on a light background */
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-width: 0px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.2s ease-in-out;
+    
+    /* A subtle dropshadow for a little 3D lift */
+    -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.4, 1, 1);
+}
+
+/* Hover Effect: Slightly brighter gradient and a more pronounced 3D lift */
+.bluepurple-button:hover {
+    /* Brighter gradient on hover */
+    -fx-background-color: 
+        linear-gradient(to right, #B2A2D4, #B8E4FF);
+    
+    /* Stronger 3D effect on hover */
+    -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 2, 2);
+}
+
+/* Pressed Effect: Simulates the button being pushed in */
+.bluepurple-button:pressed {
+   -fx-background-color: 
+        linear-gradient(to right, #8A72B8, #99C8E8);
+    
+    /* The shadow is removed and replaced with a subtle inner shadow */
+    -fx-effect: 
+        innershadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.4, 0, 0);
+    
+    -fx-translate-y: 1px;
+}
+/* A button with a solid royal blue background */
+.button-royal {
+    -fx-background-color: royalblue;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-radius: 5px;
+      -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.4, 1, 1);
+}
+.button-royal:hover {
+        -fx-font-size: 14px;
+
+    -fx-background-color: #5b80ee; /* A slightly lighter shade of blue */
+     -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 2, 2);
+}
+
+
+/* A button with a semi-transparent blue background */
+.button-transparent {
+    -fx-background-color: rgba(0, 0, 255, 0.5);
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-radius: 5px;
+     -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.4, 1, 1);
+}
+/* Hover effect for the transparent blue button */
+.button-transparent:hover {
+    -fx-background-color: rgba(0, 0, 255, 0.8); /* Increases opacity to 80% */
+     -fx-effect: 
+        dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 2, 2);
+}
+/* Base TextField Style */
+.purple-text-field {
+   
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    
+    /* Border with a purple-blue gradient */
+    -fx-border-color: linear-gradient(to right, #660099, #003366);
+    -fx-border-width: 0.5px;
+    -fx-border-radius: 5px;
+    
+}
+
+.foodorder-button {
+    -fx-background-color: rgba(255, 166, 0) ; /* A vibrant blue for active state */
+-fx-text-fill: white;
+-fx-font-weight: bold;
+-fx-border-radius: 5px;
+-fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2); /* Subtle drop shadow */
+
+}
+
+.foodorder-button:hover {
+        -fx-font-size: 12px;
+
+  -fx-border-color:  #FFA600; 
+    -fx-text-fill: whitesmoke; 
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 0, 3);
+}
+.cancel-button {
+    /* Normal state */
+    -fx-background-color: #f44336; /* A nice red color */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 2); /* Subtle drop shadow */
+    -fx-background-insets: 0, 0 0 0 0; /* Ensures background fills entire area */
+}
+
+.cancel-button:hover {
+    /* Hover state */
+    -fx-background-color: #d32f2f; /* A darker red for the hover effect */
+}
+/* The .book-button class selector targets the button */
+.book-button {
+    /* Normal state */
+    -fx-background-color: #4CAF50; /* A vibrant green */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* The :hover pseudo-class selector applies styles when the mouse is over the button */
+.book-button:hover {
+    /* Hover state - a slightly darker green */
+    -fx-background-color: #388E3C;
+}
+
+/* The :pressed pseudo-class for a click effect */
+.book-button:pressed {
+    /* Pressed state - an even darker green */
+    -fx-background-color: #1B5E20;
+}
+/* General styles for a navigation button */
+.nav-button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+   
+    -fx-cursor: hand; /* Changes cursor to a hand on hover */
+}
+
+/* This selector targets any button with the style class 'brown-button' */
+.brown-button {
+    /* Normal state properties */
+    -fx-background-color: #C6B29E; /* The requested dark brown color */
+    -fx-text-fill: white;          /* Use white text for good contrast */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;              /* Changes the cursor to a hand on hover */
+}
+
+/* This pseudo-class applies styles when the mouse is over the button */
+.brown-button:hover {
+    /* Hover state properties - a slightly darker shade of brown */
+    -fx-background-color: #6a5649; 
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0); /* Optional subtle shadow */
+}
+
+/* This pseudo-class applies styles when the button is pressed */
+.brown-button:pressed {
+    /* Pressed state properties - an even darker shade of brown */
+    -fx-background-color: #57463a;
+}
+
+/* --- General Button Styles --- */
+
+
+/* --- 1. Primary Button (e.g., "Add to Cart", "Checkout") --- */
+/* The dark brown color from the original design */
+.shop-primary-button {
+    -fx-background-color: #7F6456;
+    -fx-text-fill: white;
+}
+
+.shop-primary-button:hover {
+    -fx-background-color: #6a5649; /* Slightly darker on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.shop-primary-button:pressed {
+    -fx-background-color: #57463a; /* Even darker on press */
+}
+
+
+/* --- 2. Secondary Button (e.g., "View Details", "Back") --- */
+/* The medium brown color from the original design */
+.shop-secondary-button {
+    -fx-background-color: #C6B29E;
+    -fx-text-fill: #4D3A30; /* Use a dark text color for readability */
+}
+
+.shop-secondary-button:hover {
+    -fx-background-color: #b09f8c; /* Slightly darker on hover */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 0);
+}
+
+.shop-secondary-button:pressed {
+    -fx-background-color: #9c8e7e; /* Even darker on press */
+}
+
+
+/* --- 3. Disabled Button State --- */
+.shop-button:disabled {
+    -fx-opacity: 0.6; /* A semi-transparent effect */
+    -fx-cursor: default;
+}
+.button.cozy-button {
+  -fx-background-color: #c98e72;
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 8px;
+}
+
+.button.cozy-button:hover {
+  -fx-background-color: #b37c62;
+}
+
+.button.cozy-button:pressed {
+  -fx-background-color: #9d6b52; /* A slightly darker color for the pressed state */
+}
+/* --- Root Stylesheet for the Card --- */
+.card {
+    /* Base for the creamy oat color */
+    -fx-background-color: #f5f5dc; 
+    
+    -fx-background-radius: 8; /* Optional: adds rounded corners */
+    -fx-border-color: #ddd; /* Optional: a very light border */
+    -fx-border-width: 0.5; /* Optional: a very thin border */
+    -fx-border-radius: 8; /* Should match background-radius if used */
+
+    /* Shadow properties */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+/* --- Styles for elements inside the card --- */
+.card-title {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a4a4a; /* A dark gray for good readability */
+    -fx-padding: 0 0 10px 0; /* Space below the title */
+}
+
+.card-text {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666; /* A slightly lighter gray for body text */
+    -fx-padding: 0 0 15px 0;
+}
+/* --- Style for a card to display a clothing item --- */
+.clothbackground-card {
+    /* Main background color is a clean white */
+    -fx-background-color: white; 
+    
+    /* The "brownie cozy" border color. This is a warm, rich brown. */
+    -fx-border-color: #6f4e37; 
+    
+    /* Border width to make the border prominent */
+    -fx-border-width: 2px;
+    
+    /* Rounded corners for a softer, cozier look */
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    
+    /* A subtle drop shadow to give the card some depth */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+
+    /* Padding around the content inside the card 
+    -fx-padding: 20px;*/
+}
+.anchor-card {
+    -fx-background-color: #fcfaf1;
+    -fx-border-color: #d5d5c8;
+    -fx-border-width: 2px; /* Adjust the width as needed */
+    -fx-border-radius: 15px; /* Adjust the radius as needed */
+    -fx-background-radius: 15px; /* Important for matching the background to the border */
+        -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+
+}
+.refresh-button {
+    -fx-background-color: #FFFDD0;
+    -fx-background-radius: 5;
+    -fx-text-fill: #4b4b4b; /* A dark gray for better readability */
+    -fx-font-weight: bold;
+}
+
+/* Hover effect for when the mouse is over the button */
+.refresh-button:hover {
+    -fx-background-color: #E6E6C5; /* A slightly darker shade for the hover effect */
+}
+
+/* Pressed effect for when the button is clicked */
+.refresh-button:pressed {
+    -fx-background-color: #D3D3AD; /* An even darker shade for the pressed effect */
+}
+.rainbow-gradient-transparent {
+    -fx-background-color: 
+        /* The transparent rainbow gradient is the top layer */
+        radial-gradient(
+            /* Set the center of the gradient to the top-right corner */
+            center 100% 0%,
+            /* Set the radius to a large value to make the colors spread out */
+            radius 150%,
+            /* Define the color stops for a full rainbow spectrum with 50% transparency */
+            rgba(255, 153, 153, 0.5) 0%,      /* Soft Red */
+            rgba(255, 204, 153, 0.5) 15%,     /* Soft Orange */
+            rgba(255, 255, 153, 0.5) 30%,     /* Soft Yellow */
+            rgba(153, 255, 153, 0.5) 45%,     /* Soft Green */
+            rgba(153, 204, 255, 0.5) 60%,     /* Soft Blue */
+            rgba(153, 153, 255, 0.5) 75%,     /* Soft Indigo */
+            rgba(204, 153, 255, 0.5) 90%      /* Soft Violet */
+        )
+        /* A solid base color is the bottom layer */
+       /* A dark gray base color to make the transparent gradient visible */
+}
+.nav-button {
+    /* Set a very light, "extra white" background color */
+    -fx-background-color: #F8F8F8;  
+    -fx-border-color: #CCCCCC;      /* A light gray border for subtle contrast */
+    -fx-border-width: 1px;          /* Set the border width */
+    /* Set the border and background radii: top-left, top-right, bottom-right, bottom-left */
+     -fx-border-radius: 15px 15px 15px 15px; 
+    -fx-background-radius: 15px 15px 15px 15px; 
+   -fx-text-fill: linear-gradient(to bottom, #191970, #4B0082);
+    -fx-font-weight: bold;       /* Set the text color to dark gray for contrast */
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+
+}
+
+/* * This pseudo-class defines the style when the mouse hovers over the button.
+ * The background color is a slightly darker shade for a subtle visual effect.
+ */
+.nav-button:hover {
+    -fx-background-color: #FFFFFF;  /* A solid white for the hover state */
+    -fx-text-fill: linear-gradient(to bottom, #191970, #4B0082);
+    -fx-font-weight: bold;        /* Change text to dark gray for visibility */
+}
+.refresh-admin-button {
+    -fx-background-color: #d5d5ef;  /* The light grayish-purple base color */
+    -fx-border-color: #aab3d9;      /* A slightly darker border color for definition */
+    -fx-border-width: 1px;          /* The border width */
+    -fx-border-radius: 5px;         /* Standard rounded corners for the button */
+    -fx-background-radius: 5px;     /* Match the background to the border radius */
+    -fx-text-fill: #333333;         /* Dark gray text for readability */
+}
+
+/*
+ * This pseudo-class defines the button's style when the mouse is hovering over it.
+ * The background color darkens slightly to provide visual feedback to the user.
+ */
+.refresh-admin-button:hover {
+    -fx-background-color: #c0c7e2;  /* A slightly darker shade for the hover effect */
+}
+.admin-text-field {
+    -fx-border-color: #aab3d9;      /* A slightly darker border color for definition */
+    -fx-border-width: 1px;          /* The border width */
+    -fx-border-radius: 5px;         /* Standard rounded corners */
+    -fx-background-radius: 5px;     /* Match the background to the border radius */
+    -fx-text-fill: #333333;         /* Dark gray text for readability */
+}
+
+/*
+ * This pseudo-class defines the style when the TextField is focused.
+ * The border color becomes more prominent to indicate an active input.
+ */
+.admin-text-field:focused {
+    -fx-border-color: #7a82b9;  /* A darker, more noticeable border color on focus */
+}
+.switch1-button {
+    -fx-background-color: white;
+    -fx-border-color: #2d5138;
+    -fx-border-width: 1px 0px 0px 1px; /* Top, Right, Bottom, Left */
+    -fx-border-radius: 5px 0px 0px 0px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #333333;
+}
+
+/*
+ * Defines the hover state for the switch button, which changes the background to lime.
+ */
+.switch1-button:hover {
+    -fx-background-color: #c8e6c9;
+    -fx-text-fill: black; /* Changes text to black for better contrast on a bright background */
+}
+.switch2-button {
+    -fx-background-color: white;
+    -fx-border-color: #2d5138;
+    -fx-border-width: 1px 1px 0px 0px; /* Top, Right, Bottom, Left */
+    -fx-border-radius: 0px 5px 0px 0px;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #333333;
+}
+
+/*
+ * Defines the hover state for the switch button, which changes the background to lime.
+ */
+.switch2-button:hover {
+    -fx-background-color: #c8e6c9;
+    -fx-text-fill: black; /* Changes text to black for better contrast on a bright background */
+}
+.admin-food-card {
+    -fx-background-color: white;  /* A new light green color from your image */
+    -fx-border-color: #2d5138;         /* A bright lime border color */
+    -fx-border-width: 1px;          /* Standard border width */
+    -fx-border-radius: 5px;         /* Standard rounded corners */
+    -fx-background-radius: 5px;     /* Match the background to the border radius */
+    -fx-text-fill: #333333;         /* Dark gray text for readability */
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+
+}
+.admin-foodgreen-card {
+-fx-background-color: #c8e6c9;
+    -fx-border-color: #2d5138;         /* A bright lime border color */
+    -fx-border-width: 1px;          /* Standard border width */
+    -fx-border-radius: 5px;         /* Standard rounded corners */
+    -fx-background-radius: 5px;     /* Match the background to the border radius */
+    -fx-text-fill: #333333;         /* Dark gray text for readability */
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+
+}
+.room-anchor-card {
+    -fx-background-color:  #aaf0d1 ;
+    -fx-border-color: whitesmoke;
+    -fx-border-width: 2px; /* Adjust the width as needed */
+    -fx-border-radius: 15px; /* Adjust the radius as needed */
+    -fx-background-radius: 15px; /* Important for matching the background to the border */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+    -fx-text-fill:  #007474;
+
+}
+.rounded-image-container {
+    -fx-background-radius: 10; /* Adjust the value for desired curvature */
+    -fx-background-color: transparent;
+    -fx-border-color: #cccccc; /* Optional: adds a border around the rounded container */
+    -fx-border-radius: 10;
+    -fx-border-width: 1px;
+}
+
+.image-view-with-radius {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.5, 0, 0); /* Optional: adds a shadow for better visual effect */
+}
