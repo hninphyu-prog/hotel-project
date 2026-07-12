@@ -1,0 +1,46 @@
+/* Define a custom style class for your transparent button */
+.transparent-button {
+    -fx-background-color: transparent; /* Makes the button background completely transparent */
+    -fx-text-fill: #333333;           /* Text color (adjust as needed for contrast) */
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;           /* Padding inside the button */
+    -fx-border-color: #cccccc;        /* Optional: a subtle border to define the shape */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;           /* Rounded corners */
+
+    /* Initial Shadow */
+    /* dropshadow(blurType, color, radius, spread, offsetX, offsetY) */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 4);
+    /* Arguments:
+       - gaussian: The blur type (common for smooth shadows)
+       - rgba(0,0,0,0.1): Black color with 10% opacity (subtle shadow)
+       - 8: Blur radius
+       - 0: Spread radius (how much the shadow expands before blurring starts)
+       - 0: Horizontal offset
+       - 4: Vertical offset (shadow appears below the button)
+    */
+}
+
+/* Style for when the button is hovered over */
+.transparent-button:hover {
+    /* Changed Shadow on Hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 15, 0, 0, 8);
+    /* Here, we increase opacity to 20%, blur radius to 15, and Y-offset to 8
+       to make the shadow more prominent, giving a "lifting" effect. */
+
+    /* Optional: Other visual feedback on hover */
+    -fx-border-color: #999999; /* Slightly darker border */
+    -fx-cursor: hand;          /* Changes cursor to a hand pointer */
+}
+
+/* Optional: Style for when the button is pressed (clicked) */
+.transparent-button:pressed {
+    /* A flatter, lighter shadow to simulate being pressed down */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0, 0, 2);
+    -fx-translate-y: 1px; /* Moves the button down slightly */
+}
+
+/* Optional: Basic background for the scene/parent to see the shadow better */
+.root-pane {
+    -fx-background-color: #F0F0F0; /* Light gray background */
+}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="553.0" prefWidth="1064.0" style="-fx-background-color: #d4f0df;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HallController">
+   <children>
+      <ComboBox fx:id="comboSearch" layoutX="140.0" layoutY="14.0" prefHeight="25.0" prefWidth="103.0" />
+      <ComboBox fx:id="comboSearchData" layoutX="243.0" layoutY="14.0" prefHeight="25.0" prefWidth="115.0" />
+      <Button fx:id="btnRefresh" layoutX="385.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerRefreshAction" styleClass="refresh-admin-button" text="Refresh" />
+      <Pagination fx:id="pagination" layoutX="30.0" layoutY="56.0" prefHeight="494.0" prefWidth="622.0" style="-fx-background-color: white;" />
+      <Button fx:id="btnadd" layoutX="469.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlerAddAction" styleClass="book-button" stylesheets="@../css/style.css" text="Add" />
+       <StackPane layoutX="700" layoutY="1.0" prefHeight="577.0" prefWidth="410.0">
+      <AnchorPane fx:id="halleditpane" layoutX="638.0" layoutY="6.0" prefHeight="577.0" prefWidth="382.0" styleClass="admin-food-card" stylesheets="@../css/style.css">
+            <ImageView fx:id="imghall" fitHeight="170.0" fitWidth="300.0" layoutX="55.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view-with-radius" />
+            <Label layoutX="69.0" layoutY="249.0" styleClass="text-color" stylesheets="@../css/style.css" text="Hall No">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHallType" layoutX="64.0" layoutY="295.0" styleClass="text-color" stylesheets="@../css/style.css" text="HallType">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHallType1" layoutX="64.0" layoutY="340.0" styleClass="text-color" stylesheets="@../css/style.css" text="Capacity">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHallType11" layoutX="75.0" layoutY="387.0" styleClass="text-color" stylesheets="@../css/style.css" text="price">
+               <font>
+                  <Font name="Georgia" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="167.0" layoutY="248.0" text=":">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="167.0" layoutY="292.0" text=":">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="168.0" layoutY="337.0" text=":">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="168.0" layoutY="385.0" text=":">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHallNo" layoutX="205.0" layoutY="251.0" styleClass="text-color" stylesheets="@../css/style.css" text="001" />
+            <ComboBox fx:id="com_hall_edit" layoutX="199.0" layoutY="287.0" prefWidth="150.0" />
+            <TextField fx:id="txt_price" layoutX="200.0" layoutY="379.0" prefHeight="20.0" prefWidth="157.0" stylesheets="@../css/style.css" />
+            <Button fx:id="btn_save" layoutX="275.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleSaveAction" prefHeight="25.0" prefWidth="70.0" styleClass="book-button" stylesheets="@../css/style.css" text="Save" />
+            <Button layoutX="205.0" layoutY="446.0" mnemonicParsing="false" onAction="#clearEditAction" prefHeight="25.0" prefWidth="57.0" styleClass="cancel-button" stylesheets="@../css/style.css" text="Clear" />
+            <Button fx:id="btnImageChoose" layoutX="164.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleImageChoose" styleClass="refresh-admin-button" stylesheets="@../css/style.css" text="Change Image" />
+            <Label fx:id="capacity_field" layoutX="200.0" layoutY="361.0" prefHeight="17.0" prefWidth="149.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label fx:id="price_field" layoutX="200.0" layoutY="405.0" prefHeight="17.0" prefWidth="149.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="com_capacity" layoutX="200.0" layoutY="332.0" prefWidth="150.0" />
+            <Label fx:id="capacity_field2" layoutX="200.0" layoutY="317.0" prefHeight="17.0" prefWidth="149.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>     
+                </AnchorPane>        
+         <AnchorPane fx:id="hallviewpane" layoutX="-2.0" layoutY="-3.0" prefHeight="577.0" prefWidth="413.0" styleClass="room-anchor-card" stylesheets="@../css/style.css">
+                                       <children>
+                                          <Label layoutX="68.0" layoutY="252.0" style="-fx-text-fill: #007474;" stylesheets="@../css/style.css" text="Hall No">
+                                             <font>
+                                                <Font name="Georgia" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="64.0" layoutY="295.0" style="-fx-text-fill: #007474;" stylesheets="@../css/style.css" text="HallType">
+                                             <font>
+                                                <Font name="Georgia" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="64.0" layoutY="340.0" style="-fx-text-fill: #007474;" stylesheets="@../css/style.css" text="Capacity">
+                                             <font>
+                                                <Font name="Georgia" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblHallType111" layoutX="75.0" layoutY="387.0" style="-fx-text-fill: #007474;" stylesheets="@../css/style.css" text="price">
+                                             <font>
+                                                <Font name="Georgia" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="167.0" layoutY="248.0" text=":">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="167.0" layoutY="292.0" text=":">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="168.0" layoutY="337.0" text=":">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="168.0" layoutY="385.0" text=":">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblHallNo1" layoutX="205.0" layoutY="251.0" style="-fx-text-fill: #007474;" stylesheets="@../css/style.css" text="xxxx" />
+                                          <ComboBox fx:id="com_hall_edit1" layoutX="199.0" layoutY="289.0" prefWidth="150.0" />
+                                          <TextField fx:id="txt_price1" layoutX="200.0" layoutY="379.0" stylesheets="@../css/style.css" />
+                                          <Button fx:id="btn_save1" layoutX="271.0" layoutY="437.0" mnemonicParsing="false" onAction="#handleAddAction" prefHeight="25.0" prefWidth="70.0" styleClass="book-button" stylesheets="@../css/style.css" text="Save" />
+                                          <Button fx:id="btn_clear" layoutX="200.0" layoutY="437.0" mnemonicParsing="false" onAction="#clearAction" prefHeight="25.0" prefWidth="57.0" styleClass="cancel-button" stylesheets="@../css/style.css" text="Clear" />
+                                          <Label fx:id="capacity_field1" layoutX="200.0" layoutY="359.0" prefHeight="17.0" prefWidth="149.0">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="price_field1" layoutX="200.0" layoutY="405.0" prefHeight="17.0" prefWidth="149.0">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="halltype_field" layoutX="200.0" layoutY="317.0" prefHeight="17.0" prefWidth="149.0">
+                                             <font>
+                                                <Font size="10.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btnimghall1" layoutX="164.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleImage" styleClass="refresh-admin-button" stylesheets="@../css/style.css" text="Upload Photo" />
+                              <ImageView fx:id="imghall1" fitHeight="170.0" fitWidth="300.0" layoutX="57.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../image/imageupade.png" />
+                              </image>
+                           </ImageView>
+                              <ComboBox fx:id="com_capacity1" layoutX="200.0" layoutY="333.0" prefWidth="150.0" />
+                                            </children>
+                                    </AnchorPane>   
+           
+          </StackPane>
+              
+   </children>
+</AnchorPane>

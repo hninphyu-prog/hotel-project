@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="599.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Bar_and_pieController">
+    <children>
+
+        <!-- BarChart to display prices -->
+        <BarChart fx:id="barChart" layoutX="552.0" layoutY="162.0" prefHeight="243.0" prefWidth="411.0">
+            <xAxis>
+                <CategoryAxis label="Period" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="yAxis" label="Total Price" />
+            </yAxis>
+        </BarChart>
+      <ComboBox fx:id="TimeRangeCombo" layoutX="732.0" layoutY="47.0" onAction="#handleTimeRange" prefHeight="39.0" prefWidth="190.0" promptText="Data Analysis" stylesheets="@../css/style.css" />
+      <PieChart fx:id="p_chart" layoutX="20.0" layoutY="3.0" prefHeight="281.0" prefWidth="405.0" />
+      <Button fx:id="btnRoom" layoutX="709.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleRoomChart" prefHeight="65.0" prefWidth="92.0" styleClass="button-food-type" stylesheets="@../css/style.css" text="Room" />
+      <Button fx:id="btnLaundry" layoutX="598.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleLaundryChart" prefHeight="65.0" prefWidth="98.0" styleClass="button-food-type" stylesheets="@../css/style.css" text="Laundry " />
+      <Button fx:id="btnfood" layoutX="814.0" layoutY="477.0" mnemonicParsing="false" onAction="#handleFoodChart" prefHeight="65.0" prefWidth="92.0" styleClass="button-food-type" stylesheets="@../css/style.css" text="Food" />
+      <PieChart fx:id="pie_chart2" layoutX="20.0" layoutY="284.0" prefHeight="289.0" prefWidth="534.0" />
+      <Button fx:id="btnhall" layoutX="917.0" layoutY="477.0" mnemonicParsing="false" onAction="#handlehallChart" prefHeight="65.0" prefWidth="92.0" styleClass="button-food-type" stylesheets="@../css/style.css" text="hall" />
+    </children>
+</AnchorPane>

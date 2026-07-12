@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="263.0" prefWidth="229.0" style="-fx-background-color: white;" styleClass="shadow-pane" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="16.0" layoutY="10.0" prefHeight="119.0" prefWidth="196.0" style="-fx-background-color: #F8F8F8; -fx-background-radius: 10;">
+         <children>
+            <ImageView fx:id="roomImg" fitHeight="145.0" fitWidth="194.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow-pane">
+               <image>
+                  <Image url="@../../../../../../Downloads/Deluxe.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="12.5" layoutY="160.0" prefHeight="93.0" prefWidth="203.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Label fx:id="lbRoomType" prefWidth="140.0" text="Long Food Item Name That Should Wrap" wrapText="true">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="lbRoomPrice" text="2400ks">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="23.0" prefWidth="205.0">
+               <children>
+                  <Label text="Occupant Capacity:">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lbOccupant" text="4">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

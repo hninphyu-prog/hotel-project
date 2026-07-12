@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="477.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServiceController">
+   <children>
+      <TableView fx:id="tbservice" layoutY="45.0" prefHeight="385.0" prefWidth="469.0">
+        <columns>
+          <TableColumn fx:id="colClothName" prefWidth="75.0" text="Cloth Name" />
+          <TableColumn fx:id="colServiceType" prefWidth="88.33331298828125" text="Service Type" />
+            <TableColumn fx:id="colQty" prefWidth="55.66668701171875" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="colOrderDate" prefWidth="75.0" text="Order Date" />
+            <TableColumn fx:id="colOrderStatus" prefWidth="95.66668701171875" text="Order Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

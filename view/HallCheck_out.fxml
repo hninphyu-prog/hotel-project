@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1137.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Hall_Check_outController">
+   <children>
+      <TableView fx:id="tb_checkout" layoutX="173.0" layoutY="91.0" prefHeight="477.0" prefWidth="792.0">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="103.0" text="Name" />
+            <TableColumn fx:id="colHallNo" prefWidth="99.99996948242188" text="Hall No" />
+            <TableColumn fx:id="colPhNo" prefWidth="86.0" text="Ph_No" />
+            <TableColumn fx:id="colWantedDate" prefWidth="123.0" text="Wanted_Date" />
+            <TableColumn fx:id="colStartTime" prefWidth="127.33331298828125" text="Start_Time" />
+            <TableColumn fx:id="colEndTime" prefWidth="124.3333740234375" text="End_Time" />
+            <TableColumn fx:id="colstatus" prefWidth="129.0" text="Status" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="63.0" prefWidth="1101.0" styleClass="menu" stylesheets="@../css/style.css">
+         <children>
+            <TextField fx:id="txtSearchBar" layoutX="160.0" layoutY="15.0" prefHeight="31.0" prefWidth="202.0" promptText="Search by name" />
+            <DatePicker fx:id="DatePicker" layoutX="431.0" layoutY="18.0" promptText="Wanted Date" />
+            <Button fx:id="btnsearchbar" layoutX="620.0" layoutY="18.0" mnemonicParsing="false" onAction="#handlerefreshAction" styleClass="refresh-button" stylesheets="@../css/style.css" text="Refresh" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

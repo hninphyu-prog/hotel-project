@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="518.0" styleClass="anchor-card" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HallCustomerDataController">
+   <children>
+      <Label layoutX="145.0" layoutY="14.0" text="Customer Information">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="95.0" text="Name">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="186.0" text="NRC">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="267.0" text="Phone Number">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="354.0" text="Email Address">
+         <font>
+            <Font name="Georgia" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="txtState" layoutX="155.0" layoutY="184.0" onAction="#stateAction" prefHeight="25.0" prefWidth="79.0" />
+      <ComboBox fx:id="txtTownship" layoutX="234.0" layoutY="184.0" onAction="#townshipAction" prefHeight="25.0" prefWidth="116.0" />
+      <ComboBox fx:id="txtNation" layoutX="350.0" layoutY="184.0" prefHeight="25.0" prefWidth="67.0" />
+      <TextField fx:id="txtNrcNo" layoutX="417.0" layoutY="184.0" prefHeight="25.0" prefWidth="92.0" />
+      <TextField fx:id="txtname" layoutX="158.0" layoutY="93.0" prefHeight="36.0" prefWidth="212.0" />
+      <TextField fx:id="txtphno" layoutX="155.0" layoutY="260.0" prefHeight="36.0" prefWidth="212.0" />
+      <TextField fx:id="txtemailaddress" layoutX="158.0" layoutY="347.0" prefHeight="36.0" prefWidth="212.0" />
+      <Button fx:id="btnBack" layoutX="358.0" layoutY="442.0" mnemonicParsing="false" onAction="#handlerBackAction" styleClass="cancel-button" stylesheets="@../css/style.css" text="Back" />
+      <Button fx:id="btnComfirm" layoutX="417.0" layoutY="442.0" mnemonicParsing="false" onAction="#handlerComfirmAction" styleClass="book-button" stylesheets="@../css/style.css" text="Comfirm" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="348.0" styleClass="anchor-card" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddnewRoomCardAdminController">
+   <children>
+      <Label layoutX="57.0" layoutY="20.0" text="Room Id">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="70.0" text="Room Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="132.0" text="Floor No">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRoomId" layoutX="186.0" layoutY="20.0" text="111">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblRoomTypeName" layoutX="186.0" layoutY="70.0" text="Room Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFloorNo" layoutX="186.0" layoutY="130.0" prefHeight="31.0" prefWidth="131.0" />
+      <Button fx:id="btnAdd" layoutX="208.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleAddAction" styleClass="button-royal" stylesheets="@../css/style.css" text="Add" />
+      <Button fx:id="btnCancel" layoutX="73.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleCancelAction" styleClass="cancel-button" stylesheets="@../css/style.css" text="Cancel" />
+      <Label fx:id="lblFloorNoAlert" layoutX="272.0" layoutY="166.0" text="floor no alert floor no aler" textFill="RED" visible="false" />
+   </children>
+</AnchorPane>

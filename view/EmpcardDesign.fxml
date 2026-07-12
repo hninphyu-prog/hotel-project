@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="cardForm" prefHeight="279.0" prefWidth="239.0" styleClass="shadow-pane-elevated" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmpcardDesignController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="14.0" prefHeight="148.0" prefWidth="209.0" styleClass="rounded-image-container" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <ImageView fx:id="empImage" fitHeight="132.0" fitWidth="300.0" layoutX="50.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view-with-radius" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="49.505157470703125" AnchorPane.rightAnchor="51.494842529296875" AnchorPane.topAnchor="7.0">
+               <image>
+                  <Image url="@../../../../../Desktop/image/flower-02.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="176.0" prefHeight="109.0" prefWidth="256.0" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.505157470703125" AnchorPane.topAnchor="176.0">
+         <children>
+            <Label layoutX="51.0" layoutY="1.0" text="ID:" />
+            <Label layoutX="34.0" layoutY="20.0" text="Name:" />
+            <Label layoutX="27.0" layoutY="45.0" text="Position:" />
+            <!--<Button fx:id="btnview" layoutX="195.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleViewAction" text="View" />-->
+            <Label fx:id="lblID" layoutX="110.0" layoutY="1.0" text="001" />
+            <Label fx:id="lblName" layoutX="109.0" layoutY="20.0" text="BoBo" />
+            <Label fx:id="LblPosition" layoutX="109.0" layoutY="45.0" text="Staff" />
+            <Button fx:id="btnEdit" layoutX="177.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleEditAction" prefHeight="31.0" prefWidth="51.0" styleClass="cancel-button" stylesheets="@../css/style.css" text="Edit" />
+            <Button fx:id="btnView" layoutX="175.0" layoutY="38.0" mnemonicParsing="false" onAction="#handlebtnViewAction" prefHeight="31.0" prefWidth="57.0" styleClass="bluepurple-button" stylesheets="@../css/style.css" text="View" />
+            <Label layoutX="14.0" layoutY="67.0" text="Department:" />
+            <Label fx:id="LblDepartment" layoutX="108.0" layoutY="64.0" text="Accounting" />
+            <Label layoutX="33.0" layoutY="87.0" text="Status:" />
+            <Label fx:id="lblStatus" layoutX="108.0" layoutY="85.0" styleClass="text-color" stylesheets="@../css/style.css" text="Active" textFill="#0d0d0d">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

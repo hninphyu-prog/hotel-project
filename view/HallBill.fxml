@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HallBillController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="hallbillpane" layoutX="12.0" layoutY="7.0" prefHeight="461.0" prefWidth="415.0" styleClass="anchor-card" stylesheets="@../css/style.css">
+         <children>
+            <Label layoutX="158.0" layoutY="14.0" text="Grand Vista">
+               <font>
+                  <Font name="Georgia" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="78.0" text="Name:">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="317.0" layoutY="78.0" text="Date:">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblname" layoutX="118.0" layoutY="78.0" text="Alice">
+               <font>
+                  <Font name="Georgia" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbldate" layoutX="377.0" layoutY="81.0" text="26/06/2025">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <GridPane fx:id="gridpane" layoutX="1.0" layoutY="133.0" prefHeight="76.0" prefWidth="415.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.66665649414062" minWidth="10.0" prefWidth="55.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.33334350585938" minWidth="10.0" prefWidth="67.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.66668701171875" minWidth="10.0" prefWidth="96.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.33331298828125" minWidth="10.0" prefWidth="75.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="55.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.66668701171875" minWidth="0.0" prefWidth="71.33331298828125" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="58.66668701171875" minHeight="10.0" prefHeight="29.33331298828125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="134.66665649414062" minHeight="0.0" prefHeight="37.666656494140625" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="146.66668701171875" minHeight="10.0" prefHeight="42.333343505859375" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="104.66665649414062" minHeight="9.0" prefHeight="36.66668701171875" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Hall No">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="14.0" text="Hall Type" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="160.0" layoutY="14.0" prefHeight="19.0" prefWidth="116.0" text="Wanted Date" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="280.0" layoutY="14.0" prefWidth="67.0" text="End time" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="256.0" layoutY="14.0" prefHeight="19.0" prefWidth="85.0" text="Start Time" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label layoutX="388.0" layoutY="15.0" text="Price" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="Georgia Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <Label layoutX="327.0" layoutY="370.0" text="Total:">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="310.0" layoutY="409.0" text="Depoist:">
+               <font>
+                  <Font name="Georgia Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbltotal" layoutX="400.0" layoutY="370.0" text="00.00">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbldepoist" layoutX="400.0" layoutY="409.0" text="00.00">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgdeposit" fitHeight="76.0" fitWidth="158.0" layoutX="79.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/DepositImage.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="AnchorButton" layoutY="459.0" prefHeight="55.0" prefWidth="470.0">
+         <children>
+            <Button fx:id="btnsave" layoutX="298.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlersaveAction" prefHeight="29.0" prefWidth="52.0" styleClass="book-button" stylesheets="@../css/style.css" text="save" />
+            <Button fx:id="btnexist" layoutX="379.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlerExistAction" prefHeight="29.0" prefWidth="52.0" styleClass="cancel-button" stylesheets="@../css/style.css" text="Exist" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

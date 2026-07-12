@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1150.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookingController">
+   <children>
+      <TableView fx:id="tb_bookinglist" layoutX="78.0" layoutY="90.0" prefHeight="449.0" prefWidth="994.0">
+         <columns>
+            <TableColumn fx:id="colName" prefWidth="144.0" text="Name" />
+            <TableColumn fx:id="colRoomNo" prefWidth="59.0" text="Room No" />
+            <TableColumn fx:id="colPhNo" prefWidth="138.0" text="Ph_No" />
+            <TableColumn fx:id="colBookDate" prefWidth="155.0" text="Book Date" />
+            <TableColumn fx:id="colCheckInDate" prefWidth="130.0" text="Check In" />
+            <TableColumn fx:id="colCheckOutDate" prefWidth="150.0" text="Check Out" />
+            <TableColumn fx:id="colStatus" minWidth="15.0" prefWidth="211.0" text="Status">
+               <columns>
+                  <TableColumn fx:id="colCancel" prefWidth="113.0" text="Cancel" />
+                  <TableColumn fx:id="colCheckIn" prefWidth="112.0" text="Check_In" />
+               </columns>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="14.0" layoutY="4.0" prefHeight="63.0" prefWidth="1101.0" styleClass="menu" stylesheets="@../css/style.css">
+         <children>
+            <TextField fx:id="txtSearch" layoutX="62.0" layoutY="17.0" onAction="#handleSearchTextAction" prefHeight="25.0" prefWidth="146.0" promptText="Search Name,Room No" />
+            <DatePicker fx:id="bookingDate" layoutX="245.0" layoutY="17.0" onAction="#handleSearchDate" promptText="Search Date" />
+            <Button fx:id="btnRefresh" layoutX="456.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="refresh-button" stylesheets="@../css/style.css" text="Refresh" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

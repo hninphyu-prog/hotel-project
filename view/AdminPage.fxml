@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1240.0" style="-fx-background-color: #d4f0df;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminPageController">
+   <children>
+      <AnchorPane fx:id="whiteAnchor" layoutX="2.0" layoutY="32.0" prefHeight="565.0" prefWidth="55.0" styleClass="shadow-pane-strong" stylesheets="@../css/style.css">
+         <children>
+            <Button layoutX="2.0" layoutY="124.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="2.0" layoutY="168.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="2.0" layoutY="211.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="2.0" layoutY="253.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="2.0" layoutY="297.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="2.0" layoutY="342.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="2.0" layoutY="386.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <ImageView fx:id="whiteMenu" fitHeight="61.0" fitWidth="51.0" layoutX="1.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/menu_bar.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="34.0" layoutX="8.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/revenue.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="7.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/employee.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="11.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/room%20book.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/food.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="12.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/laundry%20icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="51.0" layoutX="15.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Hall%20icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Search%20icon.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="4.0" layoutY="432.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <Button layoutX="4.0" layoutY="476.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="51.0" styleClass="nav-button" stylesheets="@../css/style.css" />
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="13.0" layoutY="482.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/user.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="11.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Search%20icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="defaultAnchor" layoutX="65.0" layoutY="26.0" prefHeight="584.0" prefWidth="1150.0" />
+      <AnchorPane fx:id="BlackAnchor" layoutX="4.0" layoutY="32.0" prefHeight="565.0" prefWidth="190.0" styleClass="shadow-pane-strong" stylesheets="@../css/style.css">
+         <children>
+            <ImageView fx:id="BlackMenu" fitHeight="61.0" fitWidth="51.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/menu_bar.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="3.0" layoutY="123.0" mnemonicParsing="false" onAction="#handleDashboard" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Dashboard" />
+            <Button layoutX="4.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleEmp" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Emplyoee Management" />
+            <Button layoutX="4.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleRoom" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Room" />
+            <Button layoutX="4.0" layoutY="254.0" mnemonicParsing="false" onAction="#handleFood" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Food" />
+            <Button layoutX="4.0" layoutY="299.0" mnemonicParsing="false" onAction="#handleLaundry" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Laundry" />
+            <Button fx:id="btnHistory" layoutX="4.0" layoutY="388.0" mnemonicParsing="false" onAction="#handleHistory" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Room History" />
+            <Button layoutX="3.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleAdminHall" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Hall" />
+            <Button layoutX="4.0" layoutY="476.0" mnemonicParsing="false" onAction="#handleUserAccount" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="User Account" />
+            <Button layoutX="4.0" layoutY="432.0" mnemonicParsing="false" onAction="#handleHallHistory" prefHeight="43.0" prefWidth="183.0" styleClass="nav-button" stylesheets="@../css/style.css" text="Hall History" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="nameAnchor" layoutX="928.0" layoutY="1.0" prefHeight="43.0" prefWidth="312.0">
+         <children>
+            <Label fx:id="lbAdminName" layoutX="108.0" layoutY="-10.0" text="Khant Zaw">
+               <padding>
+                  <Insets left="51.0" top="13.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="51.0" layoutX="120.0" layoutY="-3.0" onMouseClicked="#handleImageAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/image-removebg-preview%20(3).png" />
+               </image>
+            </ImageView>
+            <Label styleClass="text-color" stylesheets="@../css/style.css" text="Date" />
+            <Label fx:id="lbDate" layoutX="33.0" styleClass="text-color" stylesheets="@../css/style.css" text="12.2.2024" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FoodController">
+   <children>
+      <TableView fx:id="tbFood" layoutY="73.0" prefHeight="335.0" prefWidth="469.0">
+        <columns>
+            <TableColumn fx:id="colorderDateTime" prefWidth="130.3333740234375" text="Order Date Time" />
+          <TableColumn fx:id="colfoodName" prefWidth="152.6666259765625" text="Food Name" />
+          <TableColumn fx:id="colQty" prefWidth="83.33331298828125" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="106.66668701171875" text="price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

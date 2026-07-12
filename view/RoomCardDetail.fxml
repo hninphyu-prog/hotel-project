@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomCardDetailController">
+   <children>
+      <Label layoutX="190.0" layoutY="5.0" text="History">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="47.0" text="Room No  :">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="82.0" text="Guest Name  :">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="roomid" layoutX="140.0" layoutY="47.0" text="1">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="name" layoutX="121.0" layoutY="82.0" text="May Nandar">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="47.0" text="Check In  :">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="82.0" text="Check Out :">
+         <font>
+            <Font name="Georgia" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="checkIndate" layoutX="361.0" layoutY="47.0" text="15/07/2025">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="checkoutdate" layoutX="365.0" layoutY="82.0" text="15/07/2025">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Pagination fx:id="pagination" layoutX="4.0" layoutY="115.0" maxPageIndicatorCount="2" pageCount="2" prefHeight="480.0" prefWidth="469.0" />
+   </children>
+</AnchorPane>

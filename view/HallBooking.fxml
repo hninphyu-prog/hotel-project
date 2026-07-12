@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1150.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HallBookingController">
+   <children>
+      <Pagination fx:id="pagination" layoutX="32.0" layoutY="81.0" prefHeight="479.0" prefWidth="582.0" />
+      <Button fx:id="btnconfirm" layoutX="861.0" layoutY="475.0" mnemonicParsing="false" onAction="#handlecomfirmAction" prefHeight="30.0" prefWidth="80.0" styleClass="book-button" stylesheets="@../css/style.css" text="Confirm" />
+      <TableView fx:id="tbHallBooked" layoutX="643.0" layoutY="80.0" prefHeight="314.0" prefWidth="496.0">
+        <columns>
+          <TableColumn fx:id="colhallno" prefWidth="51.0" text="Hall No" />
+          <TableColumn fx:id="colhalltype" prefWidth="78.0" text="Hall Type" />
+            <TableColumn fx:id="colbookedDate" prefWidth="85.0" text="Booked Date" />
+            <TableColumn fx:id="colstartTime" prefWidth="70.0" text="Start Time" />
+            <TableColumn fx:id="colEndTime" prefWidth="68.0" text="End Time" />
+            <TableColumn fx:id="colPrice" prefWidth="66.0" text="Price" />
+        </columns>
+      </TableView>
+      <Label layoutX="645.0" layoutY="404.0" styleClass="text-color" stylesheets="@../css/style.css" text="Total Charges">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTotalCharges" layoutX="784.0" layoutY="402.0" prefHeight="25.0" prefWidth="168.0" />
+      <Button fx:id="btncancle" layoutX="784.0" layoutY="475.0" mnemonicParsing="false" onAction="#handlerCancelAction" prefHeight="29.0" prefWidth="56.0" styleClass="cancel-button" stylesheets="@../css/style.css" text="Cancel" />
+      <Label layoutX="643.0" layoutY="437.0" styleClass="text-color" stylesheets="@../css/style.css" text="Deposit (30%)">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtdeposit" layoutX="784.0" layoutY="435.0" prefHeight="25.0" prefWidth="168.0" />
+      <AnchorPane layoutX="19.0" layoutY="7.0" prefHeight="50.0" prefWidth="1123.0" styleClass="menu" stylesheets="@../css/style.css">
+         <children>
+            <DatePicker fx:id="Booked_Date" layoutX="209.0" layoutY="15.0" prefHeight="25.0" prefWidth="139.0" />
+            <ComboBox fx:id="comboHallType" layoutX="45.0" layoutY="15.0" prefWidth="150.0" stylesheets="@../../../Myat%20Thu%20Hotel/src/css/style.css" />
+            <ComboBox fx:id="comboStartTime" layoutX="369.0" layoutY="15.0" prefHeight="25.0" prefWidth="97.0" stylesheets="@../../../Myat%20Thu%20Hotel/src/css/style.css" />
+            <ComboBox fx:id="comboEndTime" layoutX="465.0" layoutY="15.0" prefHeight="25.0" prefWidth="97.0" stylesheets="@../../../Myat%20Thu%20Hotel/src/css/style.css" />
+            <Button fx:id="btnrefresh" layoutX="582.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleRefreshAction" styleClass="refresh-button" stylesheets="@../css/style.css" text="Refresh" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

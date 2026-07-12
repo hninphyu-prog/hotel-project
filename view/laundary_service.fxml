@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1169.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Laundary_serviceController">
+   <children>
+      <AnchorPane layoutX="646.0" prefHeight="600.0" prefWidth="522.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tbCartList" layoutX="8.0" layoutY="77.0" prefHeight="394.0" prefWidth="503.0">
+              <columns>
+                  <TableColumn fx:id="colService_Name" prefWidth="90.0" text="Service" />
+                <TableColumn fx:id="col_cloth_name" prefWidth="95.0" text="Cloth Type" />
+                  <TableColumn fx:id="colQty" prefWidth="65.0" text="Qty" />
+                  <TableColumn fx:id="colPrice" prefWidth="78.0" text="Price" />
+                  <TableColumn fx:id="colTotal" minWidth="0.0" prefWidth="105.0" text="Total " />
+              </columns>
+            </TableView>
+            <Label layoutX="156.0" layoutY="483.0" text="Delivery Date" />
+            <DatePicker fx:id="deliverDate_dp" layoutX="282.0" layoutY="478.0" />
+            <Label alignment="CENTER" layoutX="169.0" layoutY="532.0" prefHeight="21.0" prefWidth="42.0" text="Total" />
+            <TextField fx:id="txtGrand_Total" editable="false" layoutX="282.0" layoutY="516.0" prefHeight="31.0" prefWidth="174.0" />
+            <Button fx:id="btnCancel" layoutX="299.0" layoutY="552.0" mnemonicParsing="false" onAction="#handle_Cancel_Action" text="Cancel" />
+            <Button fx:id="btnConfirm" layoutX="375.0" layoutY="552.0" mnemonicParsing="false" onAction="#handle_ConfirmAction" text="Confirm" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="646.0" style="-fx-background-color: white;">
+         <children>
+            <Label fx:id="lbl_date_today" alignment="CENTER" layoutX="600.0" layoutY="196.0" prefHeight="17.0" prefWidth="39.0" text="xxxx-xx-xx" />
+            <HBox fx:id="clothing_bar" alignment="CENTER_LEFT" layoutX="73.0" layoutY="87.0" prefHeight="42.0" prefWidth="268.0" />
+            <Label layoutX="26.0" layoutY="100.0" text="Gender" />
+            <Pagination fx:id="pagination" layoutX="26.0" layoutY="134.0" prefHeight="459.0" prefWidth="601.0" style="-fx-background-color: white;" />
+            <Button fx:id="btnRefresh" layoutX="436.0" layoutY="96.0" mnemonicParsing="false" onAction="#handlRefreshAction" text="Refresh" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="20.0" layoutY="13.0" prefHeight="61.0" prefWidth="1138.0" styleClass="menu" stylesheets="@../css/style.css">
+         <children>
+            <ComboBox fx:id="service_type_cb_box" layoutX="63.0" layoutY="22.0" onAction="#handle_service_box_action" prefWidth="150.0" />
+            <Label layoutX="85.0" layoutY="3.0" text="Available Service" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtsearchClothName" layoutX="236.0" layoutY="24.0" onAction="#handleSearchClothAction" promptText="enter cloth name" />
+            <Button fx:id="btnViewOrder" layoutX="525.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleViewOrderAction" styleClass="white-button" stylesheets="@../css/style.css" text="View Order" />
+            <Label layoutX="667.0" layoutY="21.0" text="Order ID" textFill="WHITE" AnchorPane.topAnchor="21.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lbl_order_id" layoutX="735.0" layoutY="17.0" prefHeight="21.0" prefWidth="42.0" text="xxx" textFill="WHITE" AnchorPane.topAnchor="17.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="827.0" layoutY="19.0" text="Room No" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="btnEnter" layoutX="911.0" layoutY="9.0" mnemonicParsing="false" onAction="#handleEnterAction" prefHeight="42.0" prefWidth="201.0" styleClass="bluepurple-button" stylesheets="@../style/laundary_page.css" text="Enter" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

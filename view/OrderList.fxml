@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1046.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderListController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="581.0" style="-fx-background-color: white;">
+         <children>
+            <TableView fx:id="tbOrderLists" layoutX="14.0" layoutY="136.0" prefHeight="406.0" prefWidth="557.0">
+              <columns>
+                <TableColumn fx:id="colOrderNo" prefWidth="46.99993896484375" text="Order No" />
+                <TableColumn fx:id="colRoomNo" prefWidth="61.0" text="Room No" />
+                  <TableColumn fx:id="colOrderDate" prefWidth="105.0" text="Order Date" />
+                  <TableColumn fx:id="colDeliveryDate" prefWidth="100.0" text="Delivery Date" />
+                  <TableColumn fx:id="colStatus" prefWidth="88.0" text="Status" />
+                  <TableColumn fx:id="colAction" prefWidth="73.0" text="Action" />
+                  <TableColumn fx:id="colDetails" prefWidth="98.0" text="Details" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnRefresh" layoutX="180.0" layoutY="98.0" mnemonicParsing="false" onAction="#handleRefreshAction" prefHeight="25.0" prefWidth="63.0" text="Refresh" />
+            <AnchorPane layoutX="6.0" layoutY="21.0" prefHeight="50.0" prefWidth="564.0" styleClass="menu" stylesheets="@../css/style.css">
+               <children>
+                  <TextField fx:id="txtSearchBar" layoutX="26.0" layoutY="15.0" onAction="#handleSearchBarAction" prefHeight="31.0" prefWidth="170.0" promptText="enter order no or room no" />
+                  <DatePicker fx:id="dp_searchdate" layoutX="242.0" layoutY="18.0" onAction="#handleSearchDateAction" prefHeight="21.0" prefWidth="170.0" />
+                  <Label layoutX="248.0" layoutY="-2.0" prefHeight="17.0" prefWidth="159.0" text="order date or delivery date" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnTakeOrder" layoutX="443.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleTakeOrderAction" styleClass="white-button" stylesheets="@../css/style.css" text="Take Order" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="21.0" layoutY="77.0" styleClass="text-color" stylesheets="@../css/style.css" text="Order Status" />
+            <ComboBox fx:id="order_status_cb_box" layoutX="21.0" layoutY="98.0" onAction="#handle_cb_boxAction" prefWidth="150.0" stylesheets="@../css/style.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="581.0" prefHeight="600.0" prefWidth="472.0" style="-fx-background-color: white;">
+         <children>
+            <AnchorPane fx:id="vocher_pane" layoutX="-3.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="472.0" styleClass="anchor-card" stylesheets="@../css/style.css">
+               <children>
+                  <Label layoutX="14.0" layoutY="56.0" styleClass="text-color" stylesheets="@../css/style.css" text="Order No" />
+                  <Label fx:id="lblOrderNo" layoutX="98.0" layoutY="54.0" prefHeight="21.0" prefWidth="63.0" styleClass="text-color" stylesheets="@../css/style.css" text="xxx" />
+                  <Label layoutX="284.0" layoutY="87.0" styleClass="text-color" stylesheets="@../css/style.css" text="Order Date" />
+                  <Label layoutX="14.0" layoutY="85.0" styleClass="text-color" stylesheets="@../css/style.css" text="Delivery_Date" />
+                  <Label fx:id="lblDeliveryDate" layoutX="98.0" layoutY="83.0" styleClass="text-color" stylesheets="@../css/style.css" text="xxxx-xx-xx" />
+                  <Label fx:id="lblOrderDate" layoutX="390.0" layoutY="87.0" styleClass="text-color" stylesheets="@../css/style.css" text="xxxx-xx-xx" />
+                  <Label layoutX="284.0" layoutY="58.0" styleClass="text-color" stylesheets="@../css/style.css" text="Room No" />
+                  <Label fx:id="lblRoomNo" layoutX="389.0" layoutY="58.0" prefHeight="21.0" prefWidth="36.0" styleClass="text-color" stylesheets="@../css/style.css" text="xxx" />
+                  <TableView fx:id="tbOrderDetailLists" layoutX="3.0" layoutY="121.0" prefHeight="391.0" prefWidth="457.0">
+                     <columns>
+                        <TableColumn fx:id="colNo" prefWidth="34.0" text="No" />
+                        <TableColumn fx:id="colClothName" prefWidth="81.0" text="Cloth Name" />
+                        <TableColumn fx:id="colServiceType" prefWidth="95.0" text="Service Name" />
+                        <TableColumn fx:id="colQty" prefWidth="94.0" text="Quantity" />
+                        <TableColumn fx:id="colPrice" prefWidth="73.0" text="Price" />
+                        <TableColumn fx:id="colTotal" prefWidth="78.0" text="Total" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="204.0" layoutY="529.0" styleClass="text-color" stylesheets="@../css/style.css" text=" Total">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtGrandTotal" layoutX="264.0" layoutY="524.0" styleClass="purple-text-field" stylesheets="@../css/style.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+                  <Label layoutX="164.0" layoutY="25.0" styleClass="text-color" stylesheets="@../css/style.css" text="Order List Detais" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
