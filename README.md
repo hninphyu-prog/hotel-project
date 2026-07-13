@@ -1,5 +1,9 @@
 # Hotel Management System
 
+## Team Contribution
+
+This project was developed as a team project.  
+
 ## Overview
 
 The Hotel Management System is a desktop application developed to simplify and automate hotel operations. 
